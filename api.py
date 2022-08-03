@@ -16,7 +16,7 @@ def api_function():
 
         with open(f"{dir}/summary_report.txt", 'a') as txtwriter:
             # puts the real time currency conversion rate into the summary report txt file
-            txtwriter.write(f'[REAL TIME CURRENCY CONVERSION RATE] USD1 = SGD{exchangerate}\n')
+            txtwriter.write(f'[REAL TIME CURRENCY CONVERSION RATE] USD1 = SGD{float(exchangerate):.5f}\n')
 
     except requests.exceptions.JSONDecodeError:
         """
@@ -27,7 +27,7 @@ def api_function():
         
         with open(f"{dir}/summary_report.txt", 'a') as txtwriter:
             # puts the default currency conversion rate into the txt file
-            txtwriter.write(f'[DEFAULT CURRENCY CONVERSION RATE] USD1 = SGD{exchangerate}\n')
+            txtwriter.write(f'[DEFAULT CURRENCY CONVERSION RATE] USD1 = SGD{float(exchangerate):.5f}\n')
 
     except ValueError:
         """
@@ -39,8 +39,8 @@ def api_function():
 
         with open(f"{dir}/summary_report.txt", 'a') as txtwriter:
             # puts the default currency conversion rate into the txt file
-            txtwriter.write(f'[DEFAULT CURRENCY CONVERSION RATE] USD1 = SGD{exchangerate}\n')
-    
+            txtwriter.write(f'[DEFAULT CURRENCY CONVERSION RATE] USD1 = SGD{float(exchangerate):.5f}\n')
+
     return float(exchangerate)
 
 # api_function()
