@@ -31,7 +31,7 @@ def api_function():
 
     except ValueError:
         """
-        This will give an error if the website returns a non_valid exchange rate and give a default 
+        This will give an error if the website returns a non-valid exchange rate and give a default 
         exchange rate of USD to SGD
         """
         print("NONETYPE NOT EXPECTED VALUE OF EXCHANGE RATE. USING DEFAULT EXCHANGE RATE USD1 =  SGD1.36")
