@@ -44,7 +44,7 @@ def profitloss_function(exchangerate):
                 # if the next day's net profit is lower than the previous day, the difference and its designated day
                 # will be converted from USD to SGD and be returned into the txt file
                 difference = previous - number
-                txtwriter.write(f'[PROFIT DEFICIT] DAY: {keylist[i]}, AMOUNT: SGD{difference * exchangerate}\n')
+                txtwriter.write(f'[PROFIT DEFICIT] DAY: {keylist[i]}, AMOUNT: SGD{float(difference * exchangerate):.2f}\n')
             if number > previous:
                 counter += 1 
                 if counter == len(profitlosslist):
