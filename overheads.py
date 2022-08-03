@@ -1,8 +1,8 @@
 # read the csv file 
 import csv
 from pathlib import Path 
-dir = Path.cwd("C:\Users\User\Downloads\pfb group assignment_group 3\pfb group assignment_group 3")
-csvdir = Path.cwd("C:\Users\User\Downloads\pfb group assignment_group 3\pfb group assignment_group 3")
+dir = Path.cwd("C:\Users\User\Downloads\pfb group assignment_group 3 (4)\pfb group assignment_group 3")
+csvdir = Path.cwd("C:\Users\User\Downloads\pfb group assignment_group 3 (4)\pfb group assignment_group 3")
 
 def overheads_function(exchangerate):
     """
@@ -31,6 +31,6 @@ def overheads_function(exchangerate):
 
     with open(f"{dir}/summary_report.txt", 'a') as txtwriter:
         # this puts the category with the highest value in SGD into the txt file after multiplying the exchange rate
-        txtwriter.write(f'[HIGHEST OVERHEADS] {keylist[position].upper()}, SGD{vallist[position]* exchangerate}\n')
+        txtwriter.write(f'[HIGHEST OVERHEADS] {keylist[position].upper()}, SGD{float(vallist[position]* exchangerate):.2f}\n')
     
 # overheads_function()
